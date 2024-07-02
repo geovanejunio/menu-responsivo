@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsivo</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Exercicio Media Query</h1>
+        <span id="burger" class="material-icons" onclick="toggleMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio molestiae accusamus voluptatibus dolores cum vero culpa ex esse veniam quam adipisci qui atque, laudantium reiciendis recusandae consectetur mollitia natus veritatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tenetur maiores soluta eos fugit labore? Quos rerum, ipsum facere quis ratione soluta, sed, reiciendis distinctio nobis accusamus ea quidem esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsum modi animi fugiat veniam odit fugit nemo hic itaque eveniet magnam repellat, ea, minima voluptatum provident! Saepe facere dicta rem?</p> 
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem quos, excepturi in placeat quam voluptatibus ea? Earum et blanditiis eos, voluptatem suscipit beatae dolores quisquam in dicta culpa quibusdam ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum explicabo cupiditate, quo nemo corporis voluptatum deserunt inventore eum aspernatur molestiae veritatis odio ea quos sint placeat architecto, eos voluptates quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore soluta dolor eveniet sunt dolores ad odit qui! Quo explicabo eveniet dolore repellendus? Ratione voluptatibus modi alias nihil, sint est nemo.</p>  
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deserunt in vero inventore esse nulla nemo voluptatibus, possimus quasi nesciunt, est alias. Laboriosam, necessitatibus voluptas quaerat possimus accusamus omnis iure? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex laboriosam molestias facere atque dolores eligendi rem nam, fugiat eos? Consequatur quasi beatae expedita ipsam explicabo natus veritatis error perspiciatis ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, minus. Distinctio, numquam sapiente? Molestiae deserunt totam dolor aliquid veritatis, enim sunt quis itaque, optio quaerat voluptatum fugit fuga, inventore pariatur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia ex natus saepe tenetur consequatur dolore nam ipsa, sapiente laboriosam reprehenderit eos tempora ea a soluta ipsam debitis odit! Aliquam, eius!</p>  
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, ut quas? Deleniti impedit, rerum aut, minima dolorum eos quo eius voluptatum non sapiente maxime corporis aliquid molestias veniam voluptatem nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor facilis impedit voluptatibus enim ea molestias earum eligendi placeat quibusdam ratione velit tempore, pariatur est ipsam, sit necessitatibus. Sit, necessitatibus eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum commodi aliquam voluptatibus delectus magni ipsum similique quos iusto corporis, fuga incidunt cumque consectetur unde ratione corrupti eius optio quod.</p>  
+        </article>
+    </main>
+    <script>
+         function mudouTamanho() {
+            const itens = document.querySelector('menu');
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'flex';
+            } else {
+                itens.style.display = 'none';
+            }
+        }
+            window.addEventListener('resize', mudouTamanho);
+            window.addEventListener('load', mudouTamanho);
+
+
+        function toggleMenu() {
+        var itensMenu = document.getElementById('itens');
+        itensMenu.style.display = (itensMenu.style.display === 'block') ? 'none' : 'block';
+    }
+
+    </script>
+</body>
+</html>
